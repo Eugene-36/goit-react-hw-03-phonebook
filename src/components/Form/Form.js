@@ -1,7 +1,6 @@
 import { Component } from "react";
 import shortid from "shortid";
 import s from "./Form.module.css";
-console.log(s);
 
 class Form extends Component {
   loginInputId = shortid.generate();

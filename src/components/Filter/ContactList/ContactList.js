@@ -1,7 +1,7 @@
 import React from "react";
 import { v4 as unId } from "uuid";
 import Contacts from "./Contacts.module.css";
-console.log(Contacts);
+
 const ContactList = ({ contacts, onDelete }) => (
   <ul className="TodoList">
     {contacts.map(({ id, name, number }) => (

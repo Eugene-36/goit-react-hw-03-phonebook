@@ -6,6 +6,7 @@ import "./App.css";
 import Form from "./components/Form/Form";
 import Filter from "./components/Filter/Filter";
 import ContactList from "./components/Filter/ContactList/ContactList";
+
 class App extends Component {
   state = {
     contacts: [
@@ -62,18 +63,12 @@ class App extends Component {
   render() {
     const { filter } = this.state;
     const visibleContact = this.getVisibleContac();
-    // const search = this.state.contacts.flatMap((el) => el.name);
-    // console.log(search);
-    // const res = search.filter((item, idx) => search.indexOf(item) === idx);
-    // // //const message = "is already in contacts";
-    // // alert(res, "is already in contacts");
 
     return (
       <div className="App">
         <div>
           <h1>Phonebook</h1>
           <Form onSubmit={this.formSubmitHandler} />
-
           <h2>Contacts</h2>
           <Filter value={filter} onChange={this.changeFilter} />
           <ContactList contacts={visibleContact} onDelete={this.deletContact} />
